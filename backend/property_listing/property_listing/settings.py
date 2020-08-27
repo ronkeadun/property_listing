@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -68,7 +69,7 @@ WSGI_APPLICATION = 'property_listing.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'propery_listing',
+        'NAME': 'property_listing',
         'USER': 'postgres',
         'PASSWORD' : 'password123',
         'HOST' : 'localhost'
@@ -126,12 +127,14 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.simplejwt.authentication.JWTAuthentication'
+        'rest_framework_simplejwt.authentication.JWTAuthentication'
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumber',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE':3
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 FILE_UPLOAD_PERMISSION = 0o640
+
+AUTH_USER_MODEL = 'accounts.UserAccount'
