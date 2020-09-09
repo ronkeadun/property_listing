@@ -12,6 +12,7 @@ import Layout from "./hocs/Layout";
 import "./sass/main.scss";
 import { Provider } from "react-redux";
 import store from "./store";
+import PrivateRoute from "./components/privateRoute";
 
 const App = () => (
   <Provider store={store}>
@@ -22,7 +23,7 @@ const App = () => (
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/listings" component={Listings} />
-          <Route exact path="/listings/:id" component={ListingDetail} />
+          <PrivateRoute exact path="/listings/:id" component={ListingDetail} />
           <Route exact path="/login" component={LogIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route component={NotFound} />
