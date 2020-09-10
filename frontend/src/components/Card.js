@@ -15,6 +15,8 @@ const card = (props) => {
           className="card__header__photo"
           src={props.photo_main}
           alt="House"
+          width="300"
+          height="300"
         />
       </div>
       <p className="card__location">
@@ -22,7 +24,7 @@ const card = (props) => {
       </p>
       <div className="row">
         <div className="col-2-of-3">
-          <p className="card__info">Price: ${numberWithCommas(props.price)}</p>
+          <p className="card__info">Price: N{numberWithCommas(props.price)}</p>
           <p className="card__info">Bedrooms: {props.bedrooms}</p>
           <p className="card__info">Bathrooms: {props.bathrooms}</p>
         </div>
