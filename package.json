@@ -1,0 +1,20 @@
+{
+  "name": "property_listing",
+  "version": "1.0.0",
+  "description": "Property Listing website is a platform where people can create and/or search housing properties for sale or rent. The website is made using django for the backend and react for the frontend. Any user can register and make a listing for selling properties.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronkeadun/property_listing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronkeadun/property_listing/issues"
+  },
+  "homepage": "https://github.com/ronkeadun/property_listing#readme"
+}
