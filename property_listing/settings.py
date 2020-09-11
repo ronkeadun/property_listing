@@ -66,26 +66,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'property_listing.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'property_listing',
-        'USER': 'postgres',
-        'PASSWORD' : 'password123',
-        'HOST' : 'localhost'
-    }
-}
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'bobtysmith00@gmail.com'
-EMAIL_HOST_PASSWORD = 'password!123'
-EMAIL_USE_TLS = True
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -147,3 +127,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 FILE_UPLOAD_PERMISSION = 0o640
 
 AUTH_USER_MODEL = 'accounts.UserAccount'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
