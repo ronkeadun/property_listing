@@ -17,7 +17,8 @@ const About = () => {
     const getTopSeller = async () => {
       try {
         const res = await axios.get(
-          "http://134.209.21.85/api/realtors/topseller",
+          "http://178.62.4.54/api/realtors/topseller",
+          // "http://localhost:8000/api/realtors/topseller",
           config
         );
         setTopSeller(res.data);
@@ -37,7 +38,8 @@ const About = () => {
     const getRealtors = async () => {
       try {
         const res = await axios.get(
-          "http://134.209.21.85/api/realtors/",
+          "http://178.62.4.54/api/realtors/",
+          // "http://localhost:8000/api/realtors/",
           config
         );
         setRealtors(res.data);

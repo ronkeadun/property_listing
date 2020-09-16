@@ -47,7 +47,8 @@ const ListingForm = (props) => {
     setLoading(true);
     axios
       .post(
-        "http://134.209.21.85/api/listings/search",
+        "http://178.62.4.54/api/listings/search",
+        // "http://localhost:8000/api/listings/search",
         {
           sale_type,
           price,

@@ -122,6 +122,21 @@ REST_FRAMEWORK = {
     'PAGE_SIZE':3
 }
 
+WSGI_APPLICATION = 'property_listing.wsgi.application'
+
+# remove databases and email backends in production and store them in
+# a local_settings.py file on the server
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'property_listing',
+        'USER': 'postgres',
+        'PASSWORD': 'password123',
+        'HOST': 'localhost'
+    }
+}
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 FILE_UPLOAD_PERMISSION = 0o640

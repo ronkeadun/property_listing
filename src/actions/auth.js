@@ -17,7 +17,8 @@ export const login = (email, password) => async (dispatch) => {
   const body = JSON.stringify({ email, password });
   try {
     const res = await axios.post(
-      "http://134.209.21.85/api/token",
+      "http://178.62.4.54/api/token",
+      // "http://localhost:8000/api/token",
       body,
       config
     );
@@ -45,7 +46,8 @@ export const signup = ({ name, email, password, password2 }) => async (
   const body = JSON.stringify({ name, email, password, password2 });
   try {
     const res = await axios.post(
-      "http://134.209.21.85/api/accounts/signup",
+      "http://178.62.4.54/api/accounts/signup",
+      // "http://localhost:8000/api/accounts/signup",
       body,
       config
     );

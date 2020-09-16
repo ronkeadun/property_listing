@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ronkeadun/property_listingprecache-manifest.45c23afb3462acf09be338b9ba416687.js"
+  "/ronkeadun/property_listingprecache-manifest.ac4c193842907b15b396aab18e9290be.js"
 );
 
 self.addEventListener('message', (event) => {

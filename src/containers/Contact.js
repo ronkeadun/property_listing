@@ -37,7 +37,8 @@ const Contact = ({ setAlert }) => {
     setLoading(true);
     axios
       .post(
-        "http://134.209.21.85/api/contacts/",
+        "http://178.62.4.54/api/contacts/",
+        // "http://localhost:8000/api/contacts/",
         { name, email, subject, message },
         config
       )
